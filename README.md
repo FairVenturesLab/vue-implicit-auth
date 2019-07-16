@@ -18,7 +18,7 @@ Vue.use(AuthPlugin, {
     })
     "OD": new AADDriver({
       TENANT: "OAuthProviderUri", // example: "http://myapp.com/"
-      CLIENT_ID: "App_Id",
+      CLIENT_ID: "AppId",
       REDIRECT_URI: "URI to redirect to after a login/logout request"
     })
   },
