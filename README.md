@@ -1,19 +1,24 @@
 # vue-implicit-auth
 A Vue.js plugin that handles requesting and refreshing id tokens used to authenticate with an OAuth2 implicit grant using server.
-Presently contains a module to handle Azure Active Directory OAuth2 token retrieval and refreshing.
+Presently contains a module to handle Azure Active Directory OAuth2 token retrieval and refreshing, as well as a module for a general OAuth provider.
 ## Installation
 `npm install --save vue-implicit-auth`
 ## Usage
 vue-implicit-auth requires the use of 'history' mode on vue-router.
 ### Installing the plugin
 ```javascript
-import { AuthPlugin, AADDriver } from 'vue-implicit-auth'
+import { AuthPlugin, AADDriver, OtherDriver } from 'vue-implicit-auth'
 Vue.use(AuthPlugin, {
   // authStyles contains modules which handle the retrieval and refreshing of id tokens
   authStyles: {
     "AAD": new AADDriver({
       TENANT: "Azure Tenant",
       CLIENT_ID: "Application id in Azure",
+      REDIRECT_URI: "URI to redirect to after a login/logout request"
+    })
+    "OD": new AADDriver({
+      TENANT: "OAuthProviderUri", // example: "http://myapp.com/"
+      CLIENT_ID: "App_Id",
       REDIRECT_URI: "URI to redirect to after a login/logout request"
     })
   },
