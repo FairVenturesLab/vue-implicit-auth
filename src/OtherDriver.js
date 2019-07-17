@@ -131,7 +131,6 @@ OtherDriver.prototype.makeLoginUri = function (silent) {
 	// generate and save a state to localStorage
 	let state = generateNonce();
 	this.state = state;
-	console.log(state)
 	// generate the base uri
 	let uri = `${this.TENANT}/${this.OAUTHVERSION}/authorize?client_id=${this.CLIENT_ID}&response_type=${this.TOKENTYPE}&redirect_uri=${this.REDIRECT_URI}${(this.SCOPE ? '&scope=' + this.SCOPE : '')}&state=${state}`
 	// if silent then uri will not prompt, but will error if not logged in

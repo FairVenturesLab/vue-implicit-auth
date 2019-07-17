@@ -1,15 +1,19 @@
 {
   "name": "@fvlab/vue-implicit-auth",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Vue.js plugin for authenticating with OAuth2 implicit grant applications.",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest --coverage"
+    "build": "./node_modules/.bin/babel src -d lib",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm install && npm run build"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FairVenturesLab/vue-implicit-auth.git"
