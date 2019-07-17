@@ -1,6 +1,6 @@
 {
-  "name": "vue-implicit-auth",
-  "version": "0.1.0",
+  "name": "@fvlab/vue-implicit-auth",
+  "version": "0.1.1",
   "description": "Vue.js plugin for authenticating with OAuth2 implicit grant applications.",
   "main": "lib/index.js",
   "directories": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Juegoman/vue-implicit-auth.git"
+    "url": "git+https://github.com/FairVenturesLab/vue-implicit-auth.git"
   },
   "keywords": [
     "implicit",
@@ -20,12 +20,12 @@
     "vue",
     "oauth2"
   ],
-  "author": "juegoman",
+  "author": "FairVentures Lab",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Juegoman/vue-implicit-auth/issues"
+    "url": "https://github.com/FairVenturesLab/vue-implicit-auth/issues"
   },
-  "homepage": "https://github.com/Juegoman/vue-implicit-auth#readme",
+  "homepage": "https://github.com/FairVenturesLab/vue-implicit-auth#readme",
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.19",
     "babel-cli": "^6.26.0",
